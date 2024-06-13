@@ -1,4 +1,4 @@
-# How to Contribute in Chrome-Gaming-Certification Project
+# How to Contribute in Project
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
 <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
@@ -16,7 +16,9 @@
   <img src="https://img.shields.io/github/contributors/GameSphere-MultiPlayer/Chrome-Gaming-Certification?style=for-the-badge" />
   <img src="https://img.shields.io/github/last-commit/GameSphere-MultiPlayer/Chrome-Gaming-Certification?style=for-the-badge" />
   </div>
-  
+
+---
+
 ### About Us:
 The "Chrome-Gaming-Certification" GitHub repository by ChromeGaming is focused on a certification process for Chrome Gaming. The repository includes core web development files such as index.html, script.js, and styles.css. These files form the basis of the project's web interface and functionality, designed to assess and certify gaming performance or compatibility on Chrome. 
 
