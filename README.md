@@ -1,4 +1,4 @@
-## How to Contribute
+# How to Contribute in Chrome-Gaming-Certification Project
 
 ### Sending a Pull Request
 
