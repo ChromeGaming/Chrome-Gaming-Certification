@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Experience Certificate Generator</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Experience Certificate Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Experience Certificate Generator</h1>
-    <form id="certificateForm">
-      <label for="employeeName">Employee Name:</label>
-      <input type="text" id="employeeName" required>
-
-      <label for="companyName">Company Name:</label>
-      <input type="text" id="companyName" required>
-
-      <label for="duration">Duration:</label>
-      <input type="text" id="duration" required>
-
-      <label for="designation">Designation:</label>
-      <input type="text" id="designation" required>
-
-      <button type="submit">Generate Certificate</button>
-    </form>
-
-    <div id="certificateOutput" class="certificate-preview hidden">
-      <h2>Experience Certificate</h2>
-      <div id="certificateContent"></div>
-      <button id="downloadBtn" class="hidden">Download</button>
+    <div class="container">
+        <h1>Experience Certificate Generator</h1>
+        <form id="certificateForm" value="_blank">
+            <div class="form_content">
+                <label>Employee Name:
+                    <input type="text" id="employeeName" placeholder="Enter your name">
+                </label>
+            </div>
+            <div class="form_content">
+                <label>Company Name:
+                    <input type="text" id="companyName" placeholder="Company name">
+                </label>
+            </div>
+            <div class="form_content">
+                <label>Duration:
+                    <input type="text" id="duration" placeholder="Service duration">
+                </label>
+            </div>
+            <div class="form_content">
+                <label>Designation:
+                    <input type="text" id="designation" placeholder="Designation">
+                </label>
+            </div>
+            <div class="form_content">
+                <input type="submit" value="Generate Certificate">
+            </div>
+        </form>
+        <div id="certificateOutput" class="certificate-preview hidden">
+            <h2>Experience Certificate</h2>
+            <div id="certificateContent"></div>
+            <button id="downloadBtn" class="hidden">Download</button>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
