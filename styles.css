@@ -52,3 +52,13 @@
   #downloadBtn {
     margin-top: 10px;
   }
+  #about-us{
+    text-align: center;
+    background-color: #f5f5f5;  /* Light gray background example */
+    padding: 20px;  /* Add some padding for better separation */
+    margin-bottom: 20px;  /* Add some margin below the section */
+    border-radius: 50px;  /* Add rounded corners with 5px radius */
+  }
+  #about-us h2{
+    font-weight: bold;
+  }
