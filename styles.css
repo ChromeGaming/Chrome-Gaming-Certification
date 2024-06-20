@@ -32,6 +32,7 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
   }
   
   .certificate-preview {
@@ -41,14 +42,3 @@
     font-family: Arial, sans-serif;
   }
   
-  .hidden {
-    display: none;
-  }
-  
-  #certificateContent {
-    margin-bottom: 20px;
-  }
-  
-  #downloadBtn {
-    margin-top: 10px;
-  }
