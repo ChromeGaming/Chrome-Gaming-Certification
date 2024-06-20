@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset=""UTF-8>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Experience Certificate Generator</title>
-  <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Experience Certificate Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Experience Certificate Generator</h1>
-        <form>
-            <div class="form-group">
-                <label for="employee-name">
-                    <i class="fas fa-user"></i> Employee Name:
+        <form id="certificateForm" value="_blank">
+            <div class="form_content">
+                <label>Employee Name:
+                    <input type="text" id="employeeName" placeholder="Enter your name">
                 </label>
-                <input type="text" id="employee-name" name="employee-name">
             </div>
-            <div class="form-group">
-                <label for="company-name">
-                    <i class="fas fa-building"></i> Company Name:
+            <div class="form_content">
+                <label>Company Name:
+                    <input type="text" id="companyName" placeholder="Company name">
                 </label>
-                <input type="text" id="company-name" name="company-name">
             </div>
-            <div class="form-group">
-                <label for="duration">
-                    <i class="fas fa-calendar-alt"></i> Duration:
+            <div class="form_content">
+                <label>Duration:
+                    <input type="text" id="duration" placeholder="Service duration">
                 </label>
-                <input type="text" id="duration" name="duration">
             </div>
-            <div class="form-group">
-                <label for="designation">
-                    <i class="fas fa-user-tie"></i> Designation:
+            <div class="form_content">
+                <label>Designation:
+                    <input type="text" id="designation" placeholder="Designation">
                 </label>
-                <input type="text" id="designation" name="designation">
             </div>
-            <button type="submit">Generate Certificate</button>
+            <div class="form_content">
+                <input type="submit" value="Generate Certificate">
+            </div>
         </form>
+        <div id="certificateOutput" class="certificate-preview hidden">
+            <h2>Experience Certificate</h2>
+            <div id="certificateContent"></div>
+            <button id="downloadBtn" class="hidden">Download</button>
+        </div>
     </div>
- 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
