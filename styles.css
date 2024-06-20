@@ -54,7 +54,7 @@ h1 {
 #certificateOutput {
     display: flex;
     flex-direction: column;
-    margin:5% 20%;
+    margin:2% 20%;
     color: aliceblue;
     border: 1px solid rgb(15, 15, 51);
     
