@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Experience Certificate Generator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -19,16 +20,13 @@
 
       <label for="designation">Designation:</label>
       <input type="text" id="designation" required>
-      <iframe src="" id ="mypdf" height="400px" width="500px " frameborder="0"></iframe>
-      <button type="submit">Generate Certificate</button>
+      <canvas id="canvas" height="350px" width="500px"></canvas>
     </form>
-
-    <div id="certificateOutput" class="certificate-preview hidden">
-      <h2>Experience Certificate</h2>
-      <div id="certificateContent"></div>
-      <button id="downloadBtn" class="hidden">Download</button>
-    </div>
-  </div>
+    <a href="#" id="download-btn"><button >Download Generated Certificate</button></a>
+     
+      
+      </div>     
+          
   <script src="script.js"></script>
 </body>
 </html>
