@@ -2,6 +2,12 @@ body {
   background-color: #f4f7f6;
   font-family: Arial, sans-serif;
   color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
@@ -11,37 +17,52 @@ body {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 h1 {
   text-align: center;
   color: #3854de;
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
 form {
   margin-bottom: 20px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+  position: relative;
 }
 
-input[type="text"] {
-  width: 100%;
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+.form-group i {
+  margin-right: 10px;
+  color: #007BFF;
+}
+
+.form-group input[type="text"] {
+  width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 15px;
   box-sizing: border-box;
   transition: border-color 0.3s;
+  font-size: 16px;
 }
 
-input[type="text"]:focus {
-  border-color: #000000;
+.form-group input[type="text"]:focus {
+  border-color: #007BFF;
   outline: none;
 }
 
@@ -57,7 +78,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #218838;
 }
 
 .certificate-preview {
@@ -79,7 +100,7 @@ button:hover {
 }
 
 #downloadBtn {
-  background-color:  #2765ac;
+  background-color: #2765ac;
   color: white;
   padding: 10px 20px;
   border: none;
