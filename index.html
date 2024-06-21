@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset=""UTF-8>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Experience Certificate Generator</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
@@ -32,8 +36,63 @@
       <h2>Experience Certificate</h2>
       <div id="certificateContent"></div>
       <button id="downloadBtn" class="hidden">Download</button>
+    <div class="container">
+        <h1>Experience Certificate Generator</h1>
+        <form>
+            <div class="form-group">
+                <label for="employee-name">
+                    <i class="fas fa-user"></i> Employee Name:
+                </label>
+                <input type="text" id="employee-name" name="employee-name">
+            </div>
+            <div class="form-group">
+                <label for="company-name">
+                    <i class="fas fa-building"></i> Company Name:
+                </label>
+                <input type="text" id="company-name" name="company-name">
+            </div>
+            <div class="form-group">
+                <label for="duration">
+                    <i class="fas fa-calendar-alt"></i> Duration:
+                </label>
+                <input type="text" id="duration" name="duration">
+            </div>
+            <div class="form-group">
+                <label for="designation">
+                    <i class="fas fa-user-tie"></i> Designation:
+                </label>
+                <input type="text" id="designation" name="designation">
+            </div>
+            <button type="submit">Generate Certificate</button>
+        </form>
     </div>
-  </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+ 
   <script src="script.js"></script>
 </body>
 </html>
