@@ -20,17 +20,13 @@ body {
   animation: fadeIn 0.5s ease-out; /* Fade in animation */
 }
 
-.certificate-section,
-.contact-form {
+.section {
   flex: 1; /* Equal width for both sections */
   padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Adjusted border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Refined box shadow */
   animation: slideIn 0.5s ease-out; /* Slide in animation */
-}
-
-.certificate-section {
   margin-right: 20px; /* Space between sections */
 }
 
@@ -44,12 +40,12 @@ body {
 .section form {
   background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Adjusted border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Refined box shadow */
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
 .form-group label {
@@ -62,11 +58,12 @@ body {
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
+  width: 100%; /* Full width inputs */
+  padding: 12px; /* Increased padding for better touch targets */
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border-color 0.3s ease; /* Smooth transition for input focus */
 }
 
 .form-group textarea {
@@ -74,34 +71,23 @@ body {
 }
 
 .button-group {
-  margin-top: 15px;
+  margin-top: 20px; /* Increased margin for better spacing */
 }
 
 button {
   background-color: #2765ac;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px; /* Increased padding for better touch targets */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
-}
-button:hover {
-  background-color: #45a049;
-}
-.button-group button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for hover effect */
 }
 
-.button-group button:hover {
+button:hover {
   background-color: #45a049;
+  transform: scale(1.05); /* Scale up effect on hover */
 }
 
 .hidden {
@@ -112,19 +98,20 @@ button:hover {
 .contact-form {
   background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Adjusted border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Refined box shadow */
   animation: slideIn 0.5s ease-out; /* Slide in animation */
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
+  width: 100%; /* Full width inputs */
+  padding: 12px; /* Increased padding for better touch targets */
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border-color 0.3s ease; /* Smooth transition for input focus */
 }
 
 .contact-form textarea {
@@ -133,6 +120,7 @@ button:hover {
 
 .contact-form .btn {
   width: 100%;
+  padding: 12px 24px; /* Increased padding for better touch targets */
 }
 
 .contact-form .msg {
@@ -146,8 +134,7 @@ button:hover {
     align-items: center; /* Center items */
   }
   
-  .certificate-section,
-  .contact-form {
+  .section {
     margin-right: 0;
     margin-bottom: 20px;
     width: 100%; /* Full width on smaller screens */
