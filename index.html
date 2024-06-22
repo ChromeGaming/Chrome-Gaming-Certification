@@ -9,6 +9,33 @@
     <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="container">
+    <div id="about-us">
+      <strong><h1>About us</h1></strong>
+    <p>created this Experience Certificate Generator to simplify the process of creating professional certificates for employment verification.  This free tool allows you to quickly generate a certificate with your information, saving you time and effort.</p>
+    <p>Feel free to try it out and let us know what you think!</p>
+    </div>
+    <h1>Experience Certificate Generator</h1>
+    <form id="certificateForm">
+      <label for="employeeName">Employee Name:</label>
+      <input type="text" id="employeeName" required>
+
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" required>
+
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" required>
+
+      <label for="designation">Designation:</label>
+      <input type="text" id="designation" required>
+
+      <button type="submit">Generate Certificate</button>
+    </form>
+
+    <div id="certificateOutput" class="certificate-preview hidden">
+      <h2>Experience Certificate</h2>
+      <div id="certificateContent"></div>
+      <button id="downloadBtn" class="hidden">Download</button>
     <div class="container">
         <h1>Experience Certificate Generator</h1>
         <form>
