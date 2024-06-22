@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience Certificate Generator</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
     <div class="section">
+      <div id="about-us">
+        <strong><h1>About us</h1></strong>
+        <p>created this Experience Certificate Generator to simplify the process of creating professional certificates for employment verification.  This free tool allows you to quickly generate a certificate with your information, saving you time and effort.</p>
+        <p>Feel free to try it out and let us know what you think!</p>
+      </div>
+      
       <h1>Experience Certificate Generator</h1>
       <form id="certificateForm">
         <div class="form-group">
@@ -47,22 +54,32 @@
     </div>
     
     <div class="section">
-      <h1 class="sub-title">Contact Me</h1>
-      <form id="contactForm">
-        <div class="form-group">
-          <input type="text" name="Name" placeholder="Your Name" required>
+      <div id="contact">
+        <h1 class="sub-title">Contact Me</h1>
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" name="Name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="Email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+        
+        <div class="social-icon">
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
-        <div class="form-group">
-          <input type="email" name="Email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-        </div>
-        <button type="submit" class="btn btn2">Submit</button>
-      </form>
-      <span id="msg"></span>
+      </div>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

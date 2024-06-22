@@ -1,33 +1,36 @@
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f7f6;
+/* Reset and General styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7f6;
+}
+
 .container {
   display: flex;
-  justify-content: space-around; /* Adjust spacing between sections */
-  align-items: flex-start; /* Align items at the top */
+  flex-direction: column;
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease-out; /* Fade in animation */
+  animation: fadeIn 0.5s ease-out;
 }
 
 .section {
-  flex: 1; /* Equal width for both sections */
+  flex: 1;
   padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 8px; /* Adjusted border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Refined box shadow */
-  animation: slideIn 0.5s ease-out; /* Slide in animation */
-  margin-right: 20px; /* Space between sections */
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-out;
+  margin-bottom: 20px;
 }
 
 .section h1,
@@ -40,12 +43,12 @@ body {
 .section form {
   background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 8px; /* Adjusted border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Refined box shadow */
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-  margin-bottom: 20px; /* Increased margin for better spacing */
+  margin-bottom: 15px;
 }
 
 .form-group label {
@@ -58,12 +61,11 @@ body {
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-  width: 100%; /* Full width inputs */
-  padding: 12px; /* Increased padding for better touch targets */
+  width: calc(100% - 20px);
+  padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s ease; /* Smooth transition for input focus */
 }
 
 .form-group textarea {
@@ -71,72 +73,80 @@ body {
 }
 
 .button-group {
-  margin-top: 20px; /* Increased margin for better spacing */
+  margin-top: 15px;
 }
 
 button {
   background-color: #2765ac;
   color: white;
-  padding: 12px 24px; /* Increased padding for better touch targets */
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s, transform 0.2s; /* Added transform for hover effect */
+  transition: background-color 0.3s;
 }
 
 button:hover {
   background-color: #45a049;
-  transform: scale(1.05); /* Scale up effect on hover */
 }
 
 .hidden {
   display: none;
 }
 
-/* Contact Me section specific styles */
-.contact-form {
+/* Contact Section specific styles */
+#contact {
+  display: flex;
+  justify-content: space-between;
   background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px; /* Adjusted border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Refined box shadow */
-  animation: slideIn 0.5s ease-out; /* Slide in animation */
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 100%; /* Full width inputs */
-  padding: 12px; /* Increased padding for better touch targets */
-  font-size: 1rem;
-  border: 1px solid #ccc;
+  padding: 30px;
   border-radius: 5px;
-  transition: border-color 0.3s ease; /* Smooth transition for input focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form textarea {
-  resize: vertical;
+#contact .social-icon {
+  margin-top: 20px;
 }
 
-.contact-form .btn {
-  width: 100%;
-  padding: 12px 24px; /* Increased padding for better touch targets */
-}
-
-.contact-form .msg {
-  margin-top: 10px;
-  color: #4CAF50;
+#contact .social-icon a {
+  font-size: 1.5rem;
+  color: #333;
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack sections vertically on smaller screens */
-    align-items: center; /* Center items */
+    padding: 10px;
   }
-  
+
   .section {
-    margin-right: 0;
-    margin-bottom: 20px;
-    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 15px;
+  }
+
+  #contact {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
