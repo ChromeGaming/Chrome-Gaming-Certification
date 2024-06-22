@@ -38,6 +38,7 @@ body {
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #333;
+  text-align: center; /* Center align the headings */
 }
 
 .section form {
@@ -97,56 +98,31 @@ button:hover {
 
 /* Contact Section specific styles */
 #contact {
+  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Align items vertically center */
   background-color: #f9f9f9;
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#contact .social-icon {
-  margin-top: 20px;
+#contactForm{
+  width: 600px;
 }
-
-#contact .social-icon a {
-  font-size: 1.5rem;
-  color: #333;
-  margin-right: 10px;
-}
-
 @media (max-width: 768px) {
   .container {
     padding: 10px;
   }
 
   .section {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
   }
 
   #contact {
     flex-direction: column;
     padding: 20px;
-  }
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
