@@ -1,98 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset=""UTF-8>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience Certificate Generator</title>
   <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
   <div class="container">
-    <div id="about-us">
-      <strong><h1>About us</h1></strong>
-    <p>created this Experience Certificate Generator to simplify the process of creating professional certificates for employment verification.  This free tool allows you to quickly generate a certificate with your information, saving you time and effort.</p>
-    <p>Feel free to try it out and let us know what you think!</p>
-    </div>
-    <h1>Experience Certificate Generator</h1>
-    <form id="certificateForm">
-      <label for="employeeName">Employee Name:</label>
-      <input type="text" id="employeeName" required>
-
-      <label for="companyName">Company Name:</label>
-      <input type="text" id="companyName" required>
-
-      <label for="duration">Duration:</label>
-      <input type="text" id="duration" required>
-
-      <label for="designation">Designation:</label>
-      <input type="text" id="designation" required>
-
-      <button type="submit">Generate Certificate</button>
-    </form>
-
-    <div id="certificateOutput" class="certificate-preview hidden">
-      <h2>Experience Certificate</h2>
-      <div id="certificateContent"></div>
-      <button id="downloadBtn" class="hidden">Download</button>
-    <div class="container">
-        <h1>Experience Certificate Generator</h1>
-        <form>
-            <div class="form-group">
-                <label for="employee-name">
-                    <i class="fas fa-user"></i> Employee Name:
-                </label>
-                <input type="text" id="employee-name" name="employee-name">
-            </div>
-            <div class="form-group">
-                <label for="company-name">
-                    <i class="fas fa-building"></i> Company Name:
-                </label>
-                <input type="text" id="company-name" name="company-name">
-            </div>
-            <div class="form-group">
-                <label for="duration">
-                    <i class="fas fa-calendar-alt"></i> Duration:
-                </label>
-                <input type="text" id="duration" name="duration">
-            </div>
-            <div class="form-group">
-                <label for="designation">
-                    <i class="fas fa-user-tie"></i> Designation:
-                </label>
-                <input type="text" id="designation" name="designation">
-            </div>
-            <button type="submit">Generate Certificate</button>
-        </form>
-    </div>
-
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    
-                    <div class="social-icon">
-                        <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
+    <div class="section">
+      <div id="about-us">
+        <strong><h1>About us</h1></strong>
+        <p>created this Experience Certificate Generator to simplify the process of creating professional certificates for employment verification.  This free tool allows you to quickly generate a certificate with your information, saving you time and effort.</p>
+        <p>Feel free to try it out and let us know what you think!</p>
+      </div>
+      
+      <h1>Experience Certificate Generator</h1>
+      <form id="certificateForm">
+        <div class="form-group">
+          <label for="employeeName">
+            <i class="fas fa-user"></i> Employee Name:
+          </label>
+          <input type="text" id="employeeName" name="employeeName" required>
         </div>
- 
+        <div class="form-group">
+          <label for="companyName">
+            <i class="fas fa-building"></i> Company Name:
+          </label>
+          <input type="text" id="companyName" name="companyName" required>
+        </div>
+        <div class="form-group">
+          <label for="duration">
+            <i class="fas fa-calendar-alt"></i> Duration:
+          </label>
+          <input type="text" id="duration" name="duration" required>
+        </div>
+        <div class="form-group">
+          <label for="designation">
+            <i class="fas fa-user-tie"></i> Designation:
+          </label>
+          <input type="text" id="designation" name="designation" required>
+        </div>
+        <button type="submit">Generate Certificate</button>
+      </form>
+      <div id="certificateOutput" class="certificate-preview hidden">
+        <h2>Experience Certificate</h2>
+        <div id="certificateContent"></div>
+        <button id="downloadBtn" class="hidden">Download</button>
+      </div>
+    </div>
+    
+    <div class="section" id="contact">
+      <h1>Contact Me</h1> <!-- Centered heading -->
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" name="Name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="Email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn2">Submit</button>
+      </form>
+      <span id="msg"></span>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
