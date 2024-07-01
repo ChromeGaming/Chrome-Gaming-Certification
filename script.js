@@ -1,39 +1,45 @@
-document.getElementById('certificateForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
+function generateCertificate() {
   var employeeName = document.getElementById('employeeName').value;
   var companyName = document.getElementById('companyName').value;
   var duration = document.getElementById('duration').value;
   var designation = document.getElementById('designation').value;
 
-  var certificateContent = `
-    <p>This is to certify that <strong>${employeeName}</strong> has worked as a <strong>${designation}</strong> at <strong>${companyName}</strong> for a duration of <strong>${duration}</strong>.</p>
-    <p>During their tenure, they have demonstrated excellent performance and contributed significantly to the success of our organization.</p>
-    <p>We wish them all the best in their future endeavors.</p>
-  `;
+  var date = new Date().toLocaleDateString();
+  var cinNumber = 'CIN: ' + generateRandomString(21);
+  var officeAddress = '1234 Elm Street, Suite 567, City, State, 12345';
+  var website = 'https://www.example.com';
+  var phoneNumber = '+1 (123) 456-7890';
 
-  document.getElementById('certificateContent').innerHTML = certificateContent;
-  document.getElementById('certificateOutput').classList.remove('hidden');
-  document.getElementById('downloadBtn').classList.remove('hidden');
-});
+  document.getElementById('cert-employeeName').innerText = employeeName;
+  document.getElementById('cert-companyName').innerText = companyName;
+  document.getElementById('cert-duration').innerText = duration;
+  document.getElementById('cert-designation').innerText = designation;
+  document.getElementById('cert-date').innerText = 'Date: ' + date;
+  document.getElementById('cert-companyFullName').innerText = companyName;
+  document.getElementById('cert-cin').innerText = cinNumber;
+  document.getElementById('cert-officeAddress').innerText = 'Address: ' + officeAddress;
+  document.getElementById('cert-website').innerText = 'Website: ' + website;
+  document.getElementById('cert-phoneNumber').innerText = 'Phone: ' + phoneNumber;
 
-document.getElementById('downloadBtn').addEventListener('click', function() {
-  var { jsPDF } = window.jspdf;
-  var doc = new jsPDF();
+  document.getElementById('certificate-section').style.display = 'block';
+}
 
-  var employeeName = document.getElementById('employeeName').value;
-  var companyName = document.getElementById('companyName').value;
-  var duration = document.getElementById('duration').value;
-  var designation = document.getElementById('designation').value;
+function downloadCertificate() {
+  var element = document.getElementById('certificate');
+  html2pdf().set({
+      margin: 0,
+      filename: 'Experience_Certificate.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, windowWidth: 210*2.83, windowHeight: 297*2.83 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  }).from(element).save();
+}
 
-  var certificateText = `
-    This is to certify that ${employeeName} has worked as a ${designation} at ${companyName} for a duration of ${duration}.
-    During their tenure, they have demonstrated excellent performance and contributed significantly to the success of our organization.
-    We wish them all the best in their future endeavors.
-  `;
-
-  var splitText = doc.splitTextToSize(certificateText, 180);
-  doc.text(splitText, 10, 10);
-
-  doc.save('experience_certificate.pdf');
-});
+function generateRandomString(length) {
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var result = '';
+  for (var i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+}
