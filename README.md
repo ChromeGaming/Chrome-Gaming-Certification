@@ -69,28 +69,35 @@ The Certificate Generator is a web application developed using React, Tailwind C
 
 3. Create a Branch:
     ```bash
-   cd Chrome-Gaming-Certification
+   cd Chrome-Gaming-Certification certification generation
     ```
      ```bash
    git checkout -b your-branch-name
     ```
      - Replace your-branch-name with a descriptive name for your branch.
   
-4. Make Your Changes:
+      ```bash
+      npm install
+      ```
+      '''bash
+      npm run dev
+      ```
+  
+5. Make Your Changes:
    - Edit the necessary files in your preferred code editor.
   
-5. Commit Your Changes:
+6. Commit Your Changes:
     ```bash
    git add .
     ```
      ```bash
    git commit -m "Description of your changes"
     ```
-6. Push Your Changes:
+7. Push Your Changes:
    ```bash
    git push origin your-branch-name
     ```
-7. Create a Pull Request:
+8. Create a Pull Request:
       - Go to your forked repository on GitHub.
       - Click the "Compare & pull request" button.
       - Provide a title and description for your pull request.
