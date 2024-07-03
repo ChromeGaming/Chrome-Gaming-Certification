@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  @apply font-sans bg-gray-100;
+}
+
+.form-section {
+  @apply bg-white p-6 rounded shadow-md mx-auto max-w-lg;
+}
+
+.form-group label {
+  @apply block font-bold mb-2;
+}
+
+.form-group input, .form-group textarea {
+  @apply w-full p-2 border rounded;
+}
+
+button {
+  @apply bg-green-600 text-white p-2 rounded w-full mt-4;
+}
+
+button:hover {
+  @apply bg-green-500;
+}
+
+.certificate-section {
+  @apply bg-white p-6 mt-8 rounded shadow-md mx-auto max-w-4xl;
+}
+
+.a4 {
+  @apply w-full h-full flex flex-col items-center justify-center text-center relative;
+}
+
+.header {
+  @apply flex justify-between items-center mb-4;
+}
+
+#cert-logo {
+  @apply w-32;
+}
+
+#certificate h2 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.signature-section {
+  @apply text-left mb-8;
+}
+
+.footer-line {
+  @apply flex justify-start items-center mb-2;
+}
+
+footer {
+  @apply bg-gray-800 text-white py-4 text-center;
+} */
