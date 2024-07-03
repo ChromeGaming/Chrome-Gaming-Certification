@@ -71,10 +71,7 @@ The Certificate Generator is a web application developed using React, Tailwind C
     ```bash
    cd Chrome-Gaming-Certification certification generation
     ```
-     ```bash
-   git checkout -b your-branch-name
-    ```
-     - Replace your-branch-name with a descriptive name for your branch.
+   
   
       ```bash
       npm install
