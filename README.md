@@ -79,7 +79,7 @@ The Certificate Generator is a web application developed using React, Tailwind C
       ```bash
       npm install
       ```
-      '''bash
+      ```bash
       npm run dev
       ```
   
