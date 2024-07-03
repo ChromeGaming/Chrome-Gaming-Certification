@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  @apply font-sans bg-gray-100;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form-section {
+  @apply bg-white p-6 rounded shadow-md mx-auto max-w-lg;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group label {
+  @apply block font-bold mb-2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-group input, .form-group textarea {
+  @apply w-full p-2 border rounded;
 }
 
-.card {
-  padding: 2em;
+button {
+  @apply bg-green-600 text-white p-2 rounded w-full mt-4;
 }
 
-.read-the-docs {
-  color: #888;
+button:hover {
+  @apply bg-green-500;
 }
+
+.certificate-section {
+  @apply bg-white p-6 mt-8 rounded shadow-md mx-auto max-w-4xl;
+}
+
+.a4 {
+  @apply w-full h-full flex flex-col items-center justify-center text-center relative;
+}
+
+.header {
+  @apply flex justify-between items-center mb-4;
+}
+
+#cert-logo {
+  @apply w-32;
+}
+
+#certificate h2 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.signature-section {
+  @apply text-left mb-8;
+}
+
+.footer-line {
+  @apply flex justify-start items-center mb-2;
+}
+
+footer {
+  @apply bg-gray-800 text-white py-4 text-center;
+} */
