@@ -43,7 +43,7 @@ const ContactForm = () => {
               <FiMessageCircle className="inline-block mr-2" /> Your Message:
             </label>
             <textarea
-              id="contactMessage"
+              id="contactMessage"SS
               name="contactMessage"
               placeholder="Enter your message"
               required
